@@ -1094,7 +1094,7 @@ function App() {
       <div className="max-w-7xl mx-auto mt-4">
         <div className="bg-white bg-opacity-90 rounded-xl shadow-lg p-4">
           <h3 className="font-bold text-gray-700 mb-2">📝 Como usar:</h3>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm text-gray-600">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 text-sm text-gray-600">
             <div>
               <strong>1. Criar personagens:</strong>
               <p>Usa o botão "Criar Personagem" para customizar!</p>
@@ -1108,8 +1108,12 @@ function App() {
               <p>Usa os balões de fala e pensamento.</p>
             </div>
             <div>
-              <strong>4. Exportar:</strong>
-              <p>Clica em "Exportar" para guardar a tua história!</p>
+              <strong>4. Guardar projeto:</strong>
+              <p>Exporta como .json para usar noutro dispositivo!</p>
+            </div>
+            <div>
+              <strong>5. Exportar:</strong>
+              <p>Guarda como PNG ou PDF para partilhar!</p>
             </div>
           </div>
         </div>
