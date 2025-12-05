@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Nunito', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 50%, #3a7ca5 100%);
+  min-height: 100vh;
+}
+
+.comic-panel {
+  background: white;
+  border: 3px solid #1a1a2e;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 4px 4px 0 #1a1a2e;
+}
+
+.speech-bubble {
+  position: absolute;
+  background: white;
+  border: 2px solid #1a1a2e;
+  border-radius: 20px;
+  padding: 10px 15px;
+  min-width: 80px;
+  cursor: move;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 20px;
+  border-width: 15px 10px 0;
+  border-style: solid;
+  border-color: #1a1a2e transparent transparent transparent;
+}
+
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -11px;
+  left: 22px;
+  border-width: 12px 8px 0;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  z-index: 1;
+}
+
+.thought-bubble {
+  position: absolute;
+  background: white;
+  border: 2px solid #1a1a2e;
+  border-radius: 50%;
+  padding: 15px 20px;
+  min-width: 80px;
+  cursor: move;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.thought-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 2px solid #1a1a2e;
+  border-radius: 50%;
+}
+
+.thought-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -32px;
+  left: 15px;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border: 2px solid #1a1a2e;
+  border-radius: 50%;
+}
+
+.draggable {
+  cursor: move;
+  user-select: none;
+}
+
+.character-preview {
+  transition: transform 0.2s;
+}
+
+.character-preview:hover {
+  transform: scale(1.1);
+}
+
+.panel-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.toolbar-btn {
+  @apply flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200 text-gray-700 font-medium;
+}
+
+.toolbar-btn:hover {
+  @apply bg-gray-50 transform -translate-y-0.5;
+}
+
+.toolbar-btn.active {
+  @apply bg-indigo-500 text-white;
+}
